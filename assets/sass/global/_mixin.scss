@@ -8,6 +8,7 @@
 		-ms-flex-pack:$justify;
 			justify-content:$justify;
 	align-items:$align;     
+	@content;
 }
 
 @mixin position ($position,$top,$left) {
@@ -36,4 +37,10 @@
 %text-indent {
 	text-indent: -99999px;
 	float: left;
+}
+
+%para {
+	padding: 25px 0;
+	font-size: 20px;
+	letter-spacing: 1px;
 }

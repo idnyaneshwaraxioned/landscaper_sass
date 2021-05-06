@@ -191,9 +191,7 @@
 	.wrapper {
 		padding: 5.5% 0;
 		p {
-			padding: 25px 0;
-			font-size: 20px;
-			letter-spacing: 1px;
+			@extend %para;
 		}
 		.services__list {
 			padding: 40px 0;
@@ -219,9 +217,56 @@
 		}
 	}
 }
-
 /* Our services section ends here */
 
+/* Project gallery section start here */
+.gallery {
+	background-color: darken($primary-color,3%);
+	text-align: center;
+	.wrapper {
+		padding: 4.5% 0;
+		color: lighten($dark, 40%);
+		.sections__heading {
+			color: lighten($dark,18%);
+			&::after {
+				background-color: $secondary-color;
+			}
+		}
+		p {
+			@extend %para;
+		}
+		.gallery_tabs {
+			padding: 2.5% 0 3.5%;
+			@include flex (flex,center,center);
+			.tab__btn {
+				padding: 8px 20px;
+				border-radius: 5px;
+				margin: 0 15px;
+				background-color: lighten($dark, 87%);
+				color: lighten($dark, 40%);
+				font-size: 18px;
+				letter-spacing: 1px;
+				&:hover {
+					background-color: $secondary-color;
+					color: $primary-color;
+				}
+			}
+			.tab__btn--active {
+				background-color: $secondary-color;
+				color: $primary-color;
+			}
+		}
+		.gallery__iteam {
+			@include flex(flex,space-between,center){
+				flex-wrap: wrap;
+			};
+			.gallery__img {
+				margin-bottom: 35px;
+			}
+		}
+	}
+}
+/* Project gallery section ends here */
 
 
 

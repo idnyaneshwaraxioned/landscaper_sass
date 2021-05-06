@@ -135,6 +135,12 @@ li {
   float: left;
 }
 
+.gallery .wrapper p, .services .wrapper p {
+  padding: 25px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
@@ -357,11 +363,6 @@ li {
 .services .wrapper {
   padding: 5.5% 0;
 }
-.services .wrapper p {
-  padding: 25px 0;
-  font-size: 20px;
-  letter-spacing: 1px;
-}
 .services .wrapper .services__list {
   padding: 40px 0;
   display: -webkit-box;
@@ -392,6 +393,63 @@ li {
 }
 
 /* Our services section ends here */
+/* Project gallery section start here */
+.gallery {
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.gallery .wrapper {
+  padding: 4.5% 0;
+  color: #666666;
+}
+.gallery .wrapper .sections__heading {
+  color: #2e2e2e;
+}
+.gallery .wrapper .sections__heading::after {
+  background-color: #6aaf31;
+}
+.gallery .wrapper .gallery_tabs {
+  padding: 2.5% 0 3.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .wrapper .gallery_tabs .tab__btn {
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin: 0 15px;
+  background-color: #dedede;
+  color: #666666;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.gallery .wrapper .gallery_tabs .tab__btn:hover {
+  background-color: #6aaf31;
+  color: #fff;
+}
+.gallery .wrapper .gallery_tabs .tab__btn--active {
+  background-color: #6aaf31;
+  color: #fff;
+}
+.gallery .wrapper .gallery__iteam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery .wrapper .gallery__iteam .gallery__img {
+  margin-bottom: 35px;
+}
+
+/* Project gallery section ends here */
 /*=================================
   main styling ends here
 =================================*/
