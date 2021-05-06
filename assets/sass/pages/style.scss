@@ -268,7 +268,37 @@
 }
 /* Project gallery section ends here */
 
-
+/* Testimonial section start here */
+.testimonials {
+	background-color: $secondary-color;
+	color: darken($primary-color,5%);
+	text-align: center;
+	.wrapper {
+		padding: 5.5% 0;
+		.testimonials__slider {
+			width: 79.3%;
+			padding: 4.8% 0;
+			margin: 0 auto;
+			.testimonials__slide {
+				display: none;
+			}
+			.testimonials__slide--active {
+				display: block;
+				p {
+					font-size: 18px;
+					letter-spacing: 1px;
+					line-height: 32px;
+				}
+				.testimonials__title {
+					margin: 18px 0;
+					display: inline-block;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+/* Testimonial section ends here */
 
 /*=================================
   main styling ends here
