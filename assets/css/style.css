@@ -119,12 +119,12 @@ li {
 .welcome .wrapper .welcome__content .welcome__btn a, .banner .wrapper .banner__btn a {
   padding: 15px 30px;
   border-radius: 5px;
-  background: #69AD31;
+  background: #6aaf31;
   color: #fff;
 }
 .welcome .wrapper .welcome__content .welcome__btn a:hover, .banner .wrapper .banner__btn a:hover {
   background-color: #e6e6e6;
-  color: #69AD31;
+  color: #6aaf31;
   box-shadow: 0 0 10px #000;
 }
 
@@ -280,11 +280,11 @@ li {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #69AD31;
+  background-color: #6aaf31;
 }
 .welcome .wrapper .welcome__content .welcome__heading .heading__bold {
   position: relative;
-  color: #69AD31;
+  color: #6aaf31;
 }
 .welcome .wrapper .welcome__content p .line__break {
   display: block;
@@ -329,6 +329,69 @@ li {
 }
 
 /* welcome section ends here */
+/* Our services section start here */
+.sections__heading {
+  padding: 16px 0;
+  position: relative;
+  color: #f2f2f2;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.sections__heading::after {
+  content: "";
+  width: 6%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d9d9d9;
+}
+
+.services {
+  background-color: #6aaf31;
+  text-align: center;
+  color: #ebebeb;
+}
+.services .wrapper {
+  padding: 5.5% 0;
+}
+.services .wrapper p {
+  padding: 25px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.services .wrapper .services__list {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+.services .wrapper .services__list .services__item {
+  flex-basis: 22%;
+}
+.services .wrapper .services__list .services__item figure {
+  width: 80%;
+  margin: 24px auto;
+  border: 12px solid #71bb34;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.services .wrapper .services__list .services__item h5 {
+  color: #f2f2f2;
+  font-size: 28px;
+}
+.services .wrapper .services__list .services__item p {
+  padding: 15px 0;
+  font-size: 17px;
+}
+
+/* Our services section ends here */
 /*=================================
   main styling ends here
 =================================*/
