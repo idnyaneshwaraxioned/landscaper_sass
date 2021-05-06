@@ -116,19 +116,19 @@ li {
   margin: 0 auto;
 }
 
-.banner .wrapper .banner__btn a {
+.welcome .wrapper .welcome__content .welcome__btn a, .banner .wrapper .banner__btn a {
   padding: 15px 30px;
   border-radius: 5px;
   background: #69AD31;
   color: #fff;
 }
-.banner .wrapper .banner__btn a:hover {
+.welcome .wrapper .welcome__content .welcome__btn a:hover, .banner .wrapper .banner__btn a:hover {
   background-color: #e6e6e6;
   color: #69AD31;
   box-shadow: 0 0 10px #000;
 }
 
-.bar1,
+.welcome .wrapper .welcome__content p .line__break, .bar1,
 .bar2,
 .bar3 {
   text-indent: -99999px;
@@ -248,6 +248,87 @@ li {
 }
 
 /* Banner section ends here*/
+/* welcome section starts here */
+.welcome {
+  background-color: #f7f7f7;
+}
+.welcome .wrapper {
+  padding: 6.5% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.welcome .wrapper .welcome__content {
+  flex-basis: 48%;
+}
+.welcome .wrapper .welcome__content .welcome__heading {
+  padding-bottom: 15px;
+  position: relative;
+  color: #2e2e2e;
+  font-size: 38px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.welcome .wrapper .welcome__content .welcome__heading::after {
+  content: "";
+  width: 12%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #69AD31;
+}
+.welcome .wrapper .welcome__content .welcome__heading .heading__bold {
+  position: relative;
+  color: #69AD31;
+}
+.welcome .wrapper .welcome__content p .line__break {
+  display: block;
+  float: unset;
+}
+.welcome .wrapper .welcome__content .welcome__btn a {
+  font-size: 17.5px;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  transition: ease 0.4s;
+}
+.welcome .wrapper .welcome__care {
+  flex-basis: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.welcome .wrapper .welcome__care .care__items {
+  flex-basis: 47.5%;
+}
+.welcome .wrapper .welcome__care .care__items h3 {
+  margin: 20px 0;
+  color: #2e2e2e;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.welcome .wrapper .welcome__care .care__items p {
+  padding: 0;
+}
+.welcome .wrapper p {
+  padding: 40px 0;
+  margin: 8px 0;
+  color: #666666;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+/* welcome section ends here */
 /*=================================
   main styling ends here
 =================================*/

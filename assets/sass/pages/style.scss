@@ -94,7 +94,76 @@
 }
 /* Banner section ends here*/
 
-
+/* welcome section starts here */
+.welcome  {
+	background-color: darken($primary-color,3%);
+		.wrapper {
+			padding: 6.5% 0;
+			@include flex (flex,space-between,flex-start);
+			.welcome__content {
+				flex-basis: 48%;
+				.welcome__heading {
+					padding-bottom: 15px;
+					position: relative;
+					color: lighten($dark,18%);
+					font-size: 38px;
+					font-weight: bolder;
+					letter-spacing: 1px;
+					&::after {
+						content:'';
+						width: 12%;
+						height: 3px;
+						@include position(absolute,100%,0);
+						background-color: $secondary-color;
+					}
+					.heading__bold {
+						position: relative;
+						color: $secondary-color;
+					}
+				}
+				p {
+					.line__break {
+						display: block;
+						@extend %text-indent;
+						float: unset;
+					}
+				}
+				.welcome__btn a{
+					@extend %btn-primary;
+					font-size: 17.5px;
+					letter-spacing: 3px;
+					word-spacing: 2px;
+					transition: ease .4s;
+				}
+			}		
+			.welcome__care {
+				flex-basis: 48%;
+				@include flex (flex,space-between,flex-start);
+				.care__items { 
+					flex-basis: 47.5%;
+					h3 {
+						margin: 20px 0;
+						color: lighten($dark,18%);
+						font-size: 26px;
+						font-weight: bold;
+						letter-spacing: 1px;
+					}
+					p {
+						padding: 0;
+					}
+				}
+			}
+			p {
+				padding: 40px 0;
+				margin: 8px 0;
+				color: lighten($dark,40%);
+				font-size: 17px;
+				letter-spacing: 1px;
+				line-height: 25px;
+			}
+		}
+}
+/* welcome section ends here */
 
 
 
