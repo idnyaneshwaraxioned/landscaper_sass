@@ -300,6 +300,103 @@
 }
 /* Testimonial section ends here */
 
+/* Contact section start here */
+	.contact {
+		background-color: darken($primary-color,3%);
+		text-align: center;
+		.wrapper {
+			padding: 4.3% 0 3.3%;
+			color: lighten($dark, 40%);
+			.sections__heading {
+				color: lighten($dark,18%);
+				&::after {
+					background-color: $secondary-color;
+				}
+			}
+			a {
+				color: lighten($dark, 40%);
+				transition: ease .4s;
+				&:hover {
+					color: $dark;
+				}
+			}
+			p {
+				@extend %para;
+			}
+
+			.contact__heading {
+				padding: 10px 0;
+				position: relative;
+				color: lighten($dark,18%);
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.contact__details {
+				padding: 3% 0;
+				@include flex (flex,center,flex-start);
+				.contact__item {
+					width: 20%;
+					margin: 0 40px;
+				}
+				.contact__heading {
+					position: relative;
+					&::after {
+						content: '';
+						width: 28%;
+						height: 3px;
+						@include position(absolute,100%,50%){
+							transform: translateX(-50%);
+						};
+						background-color: lighten($dark, 85%);
+					}	
+				}
+				address ,p {
+					padding: 0 20px;
+					font-size: 16px;
+					line-height: 30px;
+					letter-spacing: 1px;
+				}
+			}
+			.contact__form {
+				width: 64%;
+				margin: 10px auto;
+				@include flex (flex,space-between,center){
+					flex-wrap: wrap;
+				}
+				.form__control {
+					width: 48%;
+					input[type="text"] {
+						width: 100%;
+						padding: 8px 20px;
+						@extend %input;
+						border: 1px solid lighten($dark, 85%);
+						margin: 15px 0;
+						font-size: 18px;
+						letter-spacing: 1px;
+					}
+				}
+				.form__control--textarea {
+					width: 100%;
+					textarea {
+						width: 100%;
+						height: 130px;
+						padding: 20px;
+						@extend %input;
+						font-size: 18px;
+						border: 1px solid lighten($dark, 85%);
+					}
+				}
+				.contact__btn {
+					margin: 30px auto;
+					@extend %input;
+					@extend %btn-primary;
+					font-size: 18px;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+/* Contact section ends here */
 /*=================================
   main styling ends here
 =================================*/
