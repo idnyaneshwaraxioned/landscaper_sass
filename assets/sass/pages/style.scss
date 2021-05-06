@@ -1,0 +1,424 @@
+@import '../global/reset';
+@import '../global/variables';
+@import '../global/mixin';
+
+/*=================================
+  Header styling starts here
+=================================*/
+.hamburger { 
+	width: 40px;
+	height: 40px;
+	display: none;
+	@include position(absolute,4%,7%);
+}
+  
+.bar1,
+.bar2,
+.bar3 {
+	width: 100%;
+	height: 0;
+	border-top: 2px solid $primary-color;
+	margin-bottom: 6px;
+	@extend %text-indent;
+}
+
+.hamburger.active .bar1 { transform: rotate(45deg) translateX(7px); }
+.hamburger.active .bar2 { display: none; }
+.hamburger.active .bar3 { transform: rotate(-45deg) translateX(5px); }
+
+.header {
+	background-color: $bg-primary;
+	.wrapper {
+		padding: 28px 0;
+		@include flex (flex,space-between,center);
+		.header__logo {
+			font-size: 32px;
+			letter-spacing: 1px;
+			a {
+				color: darken($primary-color,10%);
+			}
+		}
+		.header__nav {
+			width: 50%;
+			.header__menu {
+				@include flex (flex,space-between,center);
+				a {
+					color: darken($primary-color,20%);
+					font-size: 16px;
+					letter-spacing: 1.5px;
+					transition: ease .4s;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}	
+}
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/* Banner section start here*/
+.banner {
+	width: 100%;
+	position: relative;
+	.wrapper {
+		width: 50%;
+		padding-top: 7%;
+		@include position (absolute,50%,50%){
+			transform: translate(-50%,-50%);
+		}
+		text-align: center;
+		color: darken($primary-color, 2%);
+		h2 {
+			font-size: 68px;
+			font-weight: bold;
+		}
+		p {
+			padding: 0 10%;
+			margin: 20px 0;
+			font-size: 24px;
+			letter-spacing: 1px;
+		}
+		.banner__btn a {
+			@extend %btn-primary;
+			margin: 25px 0;
+			font-size: 18px;
+			letter-spacing: 2px;
+		}
+	}
+}
+/* Banner section ends here*/
+
+/* welcome section starts here */
+.welcome  {
+	background-color: darken($primary-color,3%);
+		.wrapper {
+			padding: 6.5% 0;
+			@include flex (flex,space-between,flex-start);
+			.welcome__content {
+				flex-basis: 48%;
+				.welcome__heading {
+					padding-bottom: 15px;
+					position: relative;
+					color: lighten($dark,18%);
+					font-size: 38px;
+					font-weight: bolder;
+					letter-spacing: 1px;
+					&::after {
+						content:'';
+						width: 12%;
+						height: 3px;
+						@include position(absolute,100%,0);
+						background-color: $secondary-color;
+					}
+					.heading__bold {
+						position: relative;
+						color: $secondary-color;
+					}
+				}
+				p {
+					.line__break {
+						display: block;
+						@extend %text-indent;
+						float: unset;
+					}
+				}
+				.welcome__btn a{
+					@extend %btn-primary;
+					font-size: 17.5px;
+					letter-spacing: 3px;
+					word-spacing: 2px;
+					transition: ease .4s;
+				}
+			}		
+			.welcome__care {
+				flex-basis: 48%;
+				@include flex (flex,space-between,flex-start);
+				.care__items { 
+					flex-basis: 47.5%;
+					h3 {
+						margin: 20px 0;
+						color: lighten($dark,18%);
+						font-size: 26px;
+						font-weight: bold;
+						letter-spacing: 1px;
+					}
+					p {
+						padding: 0;
+					}
+				}
+			}
+			p {
+				padding: 40px 0;
+				margin: 8px 0;
+				color: lighten($dark,40%);
+				font-size: 17px;
+				letter-spacing: 1px;
+				line-height: 25px;
+			}
+		}
+}
+/* welcome section ends here */
+
+/* Our services section start here */
+.sections__heading {
+	padding: 16px 0;
+	position: relative;
+	color: darken($primary-color,5%);
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	&::after {
+		content: '';
+		width: 6%;
+		height: 3px;
+		@include position(absolute,100%,50%){
+			transform: translateX(-50%);
+		}
+		background-color: darken($primary-color,15%);
+	}
+}
+
+.services {
+	background-color: $secondary-color;
+	text-align: center;
+	color: darken($primary-color,8%);
+	.wrapper {
+		padding: 5.5% 0;
+		p {
+			@extend %para;
+		}
+		.services__list {
+			padding: 40px 0;
+			@include flex (flex,space-between,center);
+			.services__item {
+				flex-basis: 22%;
+				figure {
+					width: 80%;
+					margin: 24px auto;
+					border: 12px solid lighten($secondary-color,3%);
+					border-radius: 50%;
+					overflow: hidden;
+				}
+				h5 {
+					color: darken($primary-color,5%);
+					font-size: 28px;
+				}
+				p {
+					padding: 15px 0;
+					font-size: 17px;
+				}
+			}
+		}
+	}
+}
+/* Our services section ends here */
+
+/* Project gallery section start here */
+.gallery {
+	background-color: darken($primary-color,3%);
+	text-align: center;
+	.wrapper {
+		padding: 4.5% 0;
+		color: lighten($dark, 40%);
+		.sections__heading {
+			color: lighten($dark,18%);
+			&::after {
+				background-color: $secondary-color;
+			}
+		}
+		p {
+			@extend %para;
+		}
+		.gallery_tabs {
+			padding: 2.5% 0 3.5%;
+			@include flex (flex,center,center);
+			.tab__btn {
+				padding: 8px 20px;
+				border-radius: 5px;
+				margin: 0 15px;
+				background-color: lighten($dark, 87%);
+				color: lighten($dark, 40%);
+				font-size: 18px;
+				letter-spacing: 1px;
+				&:hover {
+					background-color: $secondary-color;
+					color: $primary-color;
+				}
+			}
+			.tab__btn--active {
+				background-color: $secondary-color;
+				color: $primary-color;
+			}
+		}
+		.gallery__iteam {
+			@include flex(flex,space-between,center){
+				flex-wrap: wrap;
+			};
+			.gallery__img {
+				margin-bottom: 35px;
+			}
+		}
+	}
+}
+/* Project gallery section ends here */
+
+/* Testimonial section start here */
+.testimonials {
+	background-color: $secondary-color;
+	color: darken($primary-color,5%);
+	text-align: center;
+	.wrapper {
+		padding: 5.5% 0;
+		.testimonials__slider {
+			width: 79.3%;
+			padding: 4.8% 0;
+			margin: 0 auto;
+			.testimonials__slide {
+				display: none;
+			}
+			.testimonials__slide--active {
+				display: block;
+				p {
+					font-size: 18px;
+					letter-spacing: 1px;
+					line-height: 32px;
+				}
+				.testimonials__title {
+					margin: 18px 0;
+					display: inline-block;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+/* Testimonial section ends here */
+
+/* Contact section start here */
+	.contact {
+		background-color: darken($primary-color,3%);
+		text-align: center;
+		.wrapper {
+			padding: 4.3% 0 3.3%;
+			color: lighten($dark, 40%);
+			.sections__heading {
+				color: lighten($dark,18%);
+				&::after {
+					background-color: $secondary-color;
+				}
+			}
+			a {
+				color: lighten($dark, 40%);
+				transition: ease .4s;
+				&:hover {
+					color: $dark;
+				}
+			}
+			p {
+				@extend %para;
+			}
+
+			.contact__heading {
+				padding: 10px 0;
+				position: relative;
+				color: lighten($dark,18%);
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.contact__details {
+				padding: 3% 0;
+				@include flex (flex,center,flex-start);
+				.contact__item {
+					width: 20%;
+					margin: 0 40px;
+				}
+				.contact__heading {
+					position: relative;
+					&::after {
+						content: '';
+						width: 28%;
+						height: 3px;
+						@include position(absolute,100%,50%){
+							transform: translateX(-50%);
+						};
+						background-color: lighten($dark, 85%);
+					}	
+				}
+				address ,p {
+					padding: 0 20px;
+					font-size: 16px;
+					line-height: 30px;
+					letter-spacing: 1px;
+				}
+			}
+			.contact__form {
+				width: 64%;
+				margin: 10px auto;
+				@include flex (flex,space-between,center){
+					flex-wrap: wrap;
+				}
+				.form__control {
+					width: 48%;
+					input[type="text"] {
+						width: 100%;
+						padding: 8px 20px;
+						@extend %input;
+						border: 1px solid lighten($dark, 85%);
+						margin: 15px 0;
+						font-size: 18px;
+						letter-spacing: 1px;
+					}
+				}
+				.form__control--textarea {
+					width: 100%;
+					textarea {
+						width: 100%;
+						height: 130px;
+						padding: 20px;
+						@extend %input;
+						font-size: 18px;
+						border: 1px solid lighten($dark, 85%);
+					}
+				}
+				.contact__btn {
+					margin: 30px auto;
+					@extend %input;
+					@extend %btn-primary;
+					font-size: 18px;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+/* Contact section ends here */
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+
+
+
+
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  

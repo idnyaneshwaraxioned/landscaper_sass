@@ -1,0 +1,52 @@
+@import './variables';
+
+@mixin flex ($display,$justify,$align) {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:$display;
+	-webkit-box-pack:$justify;
+		-ms-flex-pack:$justify;
+			justify-content:$justify;
+	align-items:$align;     
+	@content;
+}
+
+@mixin position ($position,$top,$left) {
+	position: $position;
+	top: $top;
+	left: $left;
+	@content;
+}
+
+@mixin border ($pixel,$type,$color) {
+  border: $pixel $type $color;
+}
+
+%btn-primary{
+	padding: 15px 30px;  
+	border-radius: 5px;
+	background: $secondary-color;
+	color: $primary-color;
+	&:hover {
+			background-color: darken($primary-color, 10%);
+			color: $secondary-color;
+			box-shadow: 0 0 10px $dark;
+	}
+}
+
+%text-indent {
+	text-indent: -99999px;
+	float: left;
+}
+
+%para {
+	padding: 25px 0;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+%input {
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}

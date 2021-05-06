@@ -1,8 +1,6 @@
-@charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -30,16 +28,19 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
+input[type=radio] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   cursor: pointer;
 }
@@ -50,7 +51,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,20 +69,29 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
 
 /*for all*/
 body {
@@ -87,9 +99,9 @@ body {
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -99,56 +111,495 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1665PX;
+  width: 84%;
   margin: 0 auto;
 }
+
+.contact .wrapper .contact__form .contact__btn, .welcome .wrapper .welcome__content .welcome__btn a, .banner .wrapper .banner__btn a {
+  padding: 15px 30px;
+  border-radius: 5px;
+  background: #6aaf31;
+  color: #fff;
+}
+.contact .wrapper .contact__form .contact__btn:hover, .welcome .wrapper .welcome__content .welcome__btn a:hover, .banner .wrapper .banner__btn a:hover {
+  background-color: #e6e6e6;
+  color: #6aaf31;
+  box-shadow: 0 0 10px #000;
+}
+
+.welcome .wrapper .welcome__content p .line__break, .bar1,
+.bar2,
+.bar3 {
+  text-indent: -99999px;
+  float: left;
+}
+
+.contact .wrapper p, .gallery .wrapper p, .services .wrapper p {
+  padding: 25px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.contact .wrapper .contact__form .contact__btn, .contact .wrapper .contact__form .form__control--textarea textarea, .contact .wrapper .contact__form .form__control input[type=text] {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
+.hamburger {
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: absolute;
+  top: 4%;
+  left: 7%;
+}
 
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  height: 0;
+  border-top: 2px solid #fff;
+  margin-bottom: 6px;
+}
 
+.hamburger.active .bar1 {
+  transform: rotate(45deg) translateX(7px);
+}
 
+.hamburger.active .bar2 {
+  display: none;
+}
 
+.hamburger.active .bar3 {
+  transform: rotate(-45deg) translateX(5px);
+}
 
+.header {
+  background-color: #363636;
+}
+.header .wrapper {
+  padding: 28px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .wrapper .header__logo {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+.header .wrapper .header__logo a {
+  color: #e6e6e6;
+}
+.header .wrapper .header__nav {
+  width: 50%;
+}
+.header .wrapper .header__nav .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .wrapper .header__nav .header__menu a {
+  color: #cccccc;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  transition: ease 0.4s;
+}
+.header .wrapper .header__nav .header__menu a:hover {
+  text-decoration: underline;
+}
 
 /*=================================
   Header styling ends here
-=================================*/  
-
+=================================*/
 /*=================================
   main styling starts here
 =================================*/
+/* Banner section start here*/
+.banner {
+  width: 100%;
+  position: relative;
+}
+.banner .wrapper {
+  width: 50%;
+  padding-top: 7%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fafafa;
+}
+.banner .wrapper h2 {
+  font-size: 68px;
+  font-weight: bold;
+}
+.banner .wrapper p {
+  padding: 0 10%;
+  margin: 20px 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.banner .wrapper .banner__btn a {
+  margin: 25px 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
 
+/* Banner section ends here*/
+/* welcome section starts here */
+.welcome {
+  background-color: #f7f7f7;
+}
+.welcome .wrapper {
+  padding: 6.5% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.welcome .wrapper .welcome__content {
+  flex-basis: 48%;
+}
+.welcome .wrapper .welcome__content .welcome__heading {
+  padding-bottom: 15px;
+  position: relative;
+  color: #2e2e2e;
+  font-size: 38px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.welcome .wrapper .welcome__content .welcome__heading::after {
+  content: "";
+  width: 12%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #6aaf31;
+}
+.welcome .wrapper .welcome__content .welcome__heading .heading__bold {
+  position: relative;
+  color: #6aaf31;
+}
+.welcome .wrapper .welcome__content p .line__break {
+  display: block;
+  float: unset;
+}
+.welcome .wrapper .welcome__content .welcome__btn a {
+  font-size: 17.5px;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  transition: ease 0.4s;
+}
+.welcome .wrapper .welcome__care {
+  flex-basis: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.welcome .wrapper .welcome__care .care__items {
+  flex-basis: 47.5%;
+}
+.welcome .wrapper .welcome__care .care__items h3 {
+  margin: 20px 0;
+  color: #2e2e2e;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.welcome .wrapper .welcome__care .care__items p {
+  padding: 0;
+}
+.welcome .wrapper p {
+  padding: 40px 0;
+  margin: 8px 0;
+  color: #666666;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
 
+/* welcome section ends here */
+/* Our services section start here */
+.sections__heading {
+  padding: 16px 0;
+  position: relative;
+  color: #f2f2f2;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.sections__heading::after {
+  content: "";
+  width: 6%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d9d9d9;
+}
 
+.services {
+  background-color: #6aaf31;
+  text-align: center;
+  color: #ebebeb;
+}
+.services .wrapper {
+  padding: 5.5% 0;
+}
+.services .wrapper .services__list {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+.services .wrapper .services__list .services__item {
+  flex-basis: 22%;
+}
+.services .wrapper .services__list .services__item figure {
+  width: 80%;
+  margin: 24px auto;
+  border: 12px solid #71bb34;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.services .wrapper .services__list .services__item h5 {
+  color: #f2f2f2;
+  font-size: 28px;
+}
+.services .wrapper .services__list .services__item p {
+  padding: 15px 0;
+  font-size: 17px;
+}
 
+/* Our services section ends here */
+/* Project gallery section start here */
+.gallery {
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.gallery .wrapper {
+  padding: 4.5% 0;
+  color: #666666;
+}
+.gallery .wrapper .sections__heading {
+  color: #2e2e2e;
+}
+.gallery .wrapper .sections__heading::after {
+  background-color: #6aaf31;
+}
+.gallery .wrapper .gallery_tabs {
+  padding: 2.5% 0 3.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .wrapper .gallery_tabs .tab__btn {
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin: 0 15px;
+  background-color: #dedede;
+  color: #666666;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.gallery .wrapper .gallery_tabs .tab__btn:hover {
+  background-color: #6aaf31;
+  color: #fff;
+}
+.gallery .wrapper .gallery_tabs .tab__btn--active {
+  background-color: #6aaf31;
+  color: #fff;
+}
+.gallery .wrapper .gallery__iteam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery .wrapper .gallery__iteam .gallery__img {
+  margin-bottom: 35px;
+}
 
+/* Project gallery section ends here */
+/* Testimonial section start here */
+.testimonials {
+  background-color: #6aaf31;
+  color: #f2f2f2;
+  text-align: center;
+}
+.testimonials .wrapper {
+  padding: 5.5% 0;
+}
+.testimonials .wrapper .testimonials__slider {
+  width: 79.3%;
+  padding: 4.8% 0;
+  margin: 0 auto;
+}
+.testimonials .wrapper .testimonials__slider .testimonials__slide {
+  display: none;
+}
+.testimonials .wrapper .testimonials__slider .testimonials__slide--active {
+  display: block;
+}
+.testimonials .wrapper .testimonials__slider .testimonials__slide--active p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 32px;
+}
+.testimonials .wrapper .testimonials__slider .testimonials__slide--active .testimonials__title {
+  margin: 18px 0;
+  display: inline-block;
+  font-size: 18px;
+}
 
+/* Testimonial section ends here */
+/* Contact section start here */
+.contact {
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.contact .wrapper {
+  padding: 4.3% 0 3.3%;
+  color: #666666;
+}
+.contact .wrapper .sections__heading {
+  color: #2e2e2e;
+}
+.contact .wrapper .sections__heading::after {
+  background-color: #6aaf31;
+}
+.contact .wrapper a {
+  color: #666666;
+  transition: ease 0.4s;
+}
+.contact .wrapper a:hover {
+  color: #000;
+}
+.contact .wrapper .contact__heading {
+  padding: 10px 0;
+  position: relative;
+  color: #2e2e2e;
+  font-size: 20px;
+  font-weight: bold;
+}
+.contact .wrapper .contact__details {
+  padding: 3% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact .wrapper .contact__details .contact__item {
+  width: 20%;
+  margin: 0 40px;
+}
+.contact .wrapper .contact__details .contact__heading {
+  position: relative;
+}
+.contact .wrapper .contact__details .contact__heading::after {
+  content: "";
+  width: 28%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d9d9d9;
+}
+.contact .wrapper .contact__details address, .contact .wrapper .contact__details p {
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+.contact .wrapper .contact__form {
+  width: 64%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact .wrapper .contact__form .form__control {
+  width: 48%;
+}
+.contact .wrapper .contact__form .form__control input[type=text] {
+  width: 100%;
+  padding: 8px 20px;
+  border: 1px solid #d9d9d9;
+  margin: 15px 0;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.contact .wrapper .contact__form .form__control--textarea {
+  width: 100%;
+}
+.contact .wrapper .contact__form .form__control--textarea textarea {
+  width: 100%;
+  height: 130px;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #d9d9d9;
+}
+.contact .wrapper .contact__form .contact__btn {
+  margin: 30px auto;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
 
-
+/* Contact section ends here */
 /*=================================
   main styling ends here
 =================================*/
-
 /*=================================
   footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
+=================================*/
+/*=================================
   footer styling ends here
-=================================*/ 
-
+=================================*/
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
 
-
-
-}  
+/*# sourceMappingURL=style.css.map */
